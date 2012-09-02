@@ -1,28 +1,3 @@
-node-stompjs
-============
-
-A STOMP 1.0 and 1.1 implementation for node.js that supports text and binary
-data as well as duplicate headers, with support for push-style parsing and
-serialization to Node.js Buffer instances. The content-length header is
-supported, as are variable-length message bodies.
-
-There are a bunch of other STOMP libraries out there, but when reviewing them,
-they all seem to be lacking support for various features - almost all of them
-don't support binary body data, none support duplicate header fields, etc. So
-this library was created.
-
-The implementation includes both a ClientConnection type, which maintains a raw
-socket connection to the message broker, as well as a ClientConnector type that
-provides a bit more functionality, such as implementing a proper CONNECT and
-DISCONNECT sequence.
-
-STOMP frames and frame parsing is completely independent of the underlying
-transport, so it should be easy enough to use a file stream as your data
-source, which is good for testing.
-
-License
--------
-
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
